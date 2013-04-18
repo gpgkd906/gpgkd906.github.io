@@ -4,7 +4,7 @@
   <title><![CDATA[gpgkd906's Blog]]></title>
   <link href="http://gpgkd906.github.io/atom.xml" rel="self"/>
   <link href="http://gpgkd906.github.io/"/>
-  <updated>2013-04-18T13:10:20+09:00</updated>
+  <updated>2013-04-18T13:14:38+09:00</updated>
   <id>http://gpgkd906.github.io/</id>
   <author>
     <name><![CDATA[Gpgkd906]]></name>
@@ -12,5 +12,14 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[title]]></title>
+    <link href="http://gpgkd906.github.io/blog/2013/04/18/title/"/>
+    <updated>2013-04-18T13:11:00+09:00</updated>
+    <id>http://gpgkd906.github.io/blog/2013/04/18/title</id>
+    <content type="html"><![CDATA[<p>用这个来学一下ruby也不错啊</p>
+]]></content>
+  </entry>
   
 </feed>
