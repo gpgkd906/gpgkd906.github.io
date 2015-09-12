@@ -1,0 +1,317 @@
+<!doctype html>  
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <title>JavaScript CROSS</title>
+    
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <link rel="stylesheet" href="lib/zenburn.css">
+    <link rel="stylesheet" href="css/jsvm.css">    
+    <link rel="stylesheet" href="css/prism-dark.css" />
+    <script src="js/prism-es6.js"></script>
+    <style>
+      .orange .state-background {
+      background: #f1622f;
+      }
+    </style>
+  </head>
+  
+  <body>
+    
+    <div id="reveal">
+
+      <div class="state-background"></div>
+      
+      <div class="slides">
+        <section>
+          <h2 style="color: #000; margin-bottom: 40px;">JavaScript X</h1>
+          <h3 class="inverted old-school"></h3>
+
+	  <img src="assets/images/javascript.png" height="420" width="672">
+        </section>
+
+        <section>
+	  <h2>自己紹介</h2>
+	  
+	  <div>
+	    <ul>
+	      <li>名前:チェン ハン
+	      <li>ICT事業部 WEBソリューション部 ECSuitesチーム
+	      <li>WEB開発暦5年くらい
+	      <li>技術が好き
+	    </ul>
+	  </div>
+	</section>
+
+        <section>
+	  <h2>簡単な歴史</h2>
+	  
+	  <div>
+	    <ul>
+	      <li>1995：JavaScriptの誕生
+	      <li>90年代後半から: ECMA-262の標準化・現代仕様ベースライン(ES3)
+	      <li>2005: Gmail誕生・Ajaxの確立
+	      <li>2008～2009: ES4の失敗・次世代への掛け橋となるES5
+	      <li>2015.6～: ES6・より良いWEB言語 
+	    </ul>
+	  </div>
+	</section>
+	
+	<!-- code block
+	     <img src="assets/images/left-arrow.png" class="transparent" style="vertical-align: bottom; margin-left: 20px;" width=95 height=46 />
+	     <section>
+	       <h2></h2>
+	       
+	       <div style="position: relative; top: 0px;">
+		 <pre><code class="language-javascript">
+		     
+		 </code></pre>
+	       </div>
+	     </section>
+	     -->
+	<section>
+	  <section>
+	    <h2>JavaScriptの誕生</h2>
+	    <img src="assets/images/brendanEich.jpg" height="300" width="400">
+	    <div style="position: relative; top: 0px; margin:auto; width:800; text-align: left">
+	      <p>Brendan Eich: JavaScriptの設計者、1995年にNetscapes社に雇われ、Netscape Navigatorで動作する新しい言語を作ることになった。<p>
+		<span>そして、たったの10日間で、最初のJavaScriptを納品した。</span>
+	      <p style="text-align: center"><a href="https://www.youtube.com/watch?v=IPxQ9kEaF8c">パパのインタービュ－(youtube)</a></p>
+	    </div>
+	    <p></p>
+	  </section>
+
+	  <section>
+	    <h2>10日での納品となると...</h2>
+	    <h4>...とにかく他言語の良いところを参考</h4>
+	    <div>
+	      <ul>
+		<li>Cの文法
+		<li>Javaのデータタイプとメモリ管理
+		<li>Scheme言語の第一級関数
+		<li>Self言語のプロトタイプ
+	      </ul>
+	    </div>
+	  </section>
+	  
+	  <section>
+	    <h2>やはり10日はきつかった...</h2>
+	    <h4></h4>
+	    
+	    <div>
+	      <ul>
+		<li>20年後の今日でもはまられているトリック<br/>
+		  &nbsp;&nbsp;グローバル変数、スコープ、セミコロン自動補完、typeof、自動型変換、NaNなど...
+		<li>最大なトリック、遅すぎる<br/>		 
+	      </ul>
+	    </div>
+	  </section>
+	  
+	  <section>
+	    <h2>不意の時期もあった</h2>
+	    <h4></h4>
+	    
+	    <div>
+	      <ul>
+		<li>1995年にMicrosoftがIEを発表、第一次ブラウザ戦争が始まる
+		<li>セキュリティ対策よりも新機能の盛り込まれが中心だった
+		<li>2000年に、MS IEの勝利として第一次ブラウザ戦争が終わった
+		<li>MSはWEBの会社ではなかった、敵なしIEは進化しなかった
+		<li>ついに、JSをoffにするようの流れにもなった
+		<li>ECMAScriptとして標準化された(説明が必要)
+	      </ul>
+	    </div>
+	  </section>
+
+	  <section>
+	    <h2>パパの悔い</h2>
+	    <h4>the part that is good is not original and the part that is original is not good</h4>
+	      <div style="position: relative; text-align:left">
+                <blockquote>
+		  Ajax開発者達はJSが好きだと言っているが、JS嫌いな人も大勢にいる、私もその一人だ...サミュエル・ジョンソンが言うように:
+		  <strong>それの良いところはオリジナルではない、それのオリジナルは良くない</strong>
+		</blockquote>
+              </div>
+            <p class="attribution">&mdash; <a href="https://brendaneich.com/2008/04/popularity/">Brendan Eich, 2008</a></p>
+	  </section>
+	</section>
+	
+	<section>
+	  <h2>JavaScriptをDisてません</h2>
+	  <div style="position: relative; top: 50px;">	
+	    <div>
+	      <ul>
+		<li>私はJavaScriptを愛している
+		<li>JavaScriptの未来を知るため、まず過去を知るべき
+		<li>より良いJavaScriptを知る前に、醜いJavaScriptを知るべき
+	      </ul>
+	    </div>
+	  </div>
+	</section>
+	
+        <section>
+          <section>
+            <h2>JavaScriptの逆襲</h2>
+	    <h4>HTML5と共に進化</h4>
+	    <div>
+	      <ul>
+		<li>第二次ブラウザ戦争
+		<li>Google Map、GmailによるAjaxの確立
+		<li>ACID3：ECMAScript中心のセキュリティテストケース
+		<li>V8エンジン
+		<li>ES4・ES5
+	      </ul>
+	    </div>
+	    
+          </section>
+
+	  <section>
+	    <h2>V8：JavaScript高速化!</h2>
+	    <h4>JITエンジン</h4>
+	    <img src="assets/images/v8.jpg" height="300" width="400">	    
+	  </section>
+	  
+	  <section>
+	    <h2>V8：JavaScript高速化?</h2>
+	    <h4>型？</h4>
+	    <div style="position: relative; top: 0px;">
+	      <pre><code class="language-javascript">
+function add (a, b) {
+    return a + b;
+}
+var c = add(1, 2);
+//JIT：よし、出番だ、速くしてみせる
+int function add (int a, int b) {
+    return a + b;
+}
+//どうや、早くなっただろう
+...
+var d = add('hello', 'world');
+//JIT: フザケルナ！
+	      </code></pre>
+	    </div>	    
+	  </section>
+
+	  <section>
+	    <h2>JITエンジンの気持ち</h2>
+	    <img src="assets/images/cry.jpg" class="transparent" style="vertical-align: bottom; margin-left: 20px;" width=660 height=450 />
+	    <div>
+	    </div>
+	  </section>
+	  
+	  <section>
+	    <h2>架け橋なるES5</h2>
+	    <h4><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Strict_mode">"use strict;"</a></h4>
+	    ES4はES3と互換性がないため、廃案、ES5はES3と互換性を持つことは当初から目標であった。<br />	    
+            <ul>
+	      <li>エラーとなるべきところでは、エラーを出す
+	      <pre><code class="language-javascript">
+"use strict";
+mistypedVaraible = 17; // エラーになる、不意にグロバル変数を作れなくなった
+	      </code></pre>
+	      <li>危険な処理を防ぐ
+	      <pre><code class="language-javascript">
+"use strict";
+delete String.prototype; // throws a TypeError
+	      </code></pre>
+            </ul>曖昧な構文を廃止する	    
+	  </section>
+        </section>
+	
+	<section>
+          <section>
+            <h2>現代JavaScriptが目指す所</h2>
+	    <h4>ECMAScript 6</h4>
+	    <div style="position: relative; top: 50px;">
+              <ul>
+		<li>アプリ
+		<li>より良いライブラリ
+		<li>WEBの処理系
+              </ul>
+	    </div>
+	    
+          </section>
+	  
+          <section>
+            <h2>WebAssembly</h2>
+	    <h4>ブラウザが実行可能なバイナリ形式</h4>
+	    <div style="position: relative;">
+              <ul>
+		<li>asm.js<br/>
+		  <pre><code class="language-javascript">
+"use asm";		      
+var a = 10 | 0;
+//明示的にaを数値と宣言する
+int a = 10;
+	      </code></pre>
+		<li>WebAssembly
+              </ul>
+	    </div>	    
+          </section>
+        </section>
+	
+        <section>
+	  <div style="position: relative; text-align:center; top: 150px">
+            ご清聴ありがとうございます
+	  </div>
+        </section>
+	
+      </div>
+
+      <!-- The navigational controls UI -->
+      <aside class="controls">
+        <a class="left" href="#">&#x25C4;</a>
+        <a class="right" href="#">&#x25BA;</a>
+        <a class="up" href="#">&#x25B2;</a>
+        <a class="down" href="#">&#x25BC;</a>
+      </aside>
+
+      <!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+      <div class="progress"><span></span></div>
+      
+    </div>
+    
+    <script src="js/reveal.js"></script>
+
+    <!-- Optional libraries for code syntax highlighting and classList support in IE9 -->
+    <script src="lib/highlight.js"></script>
+    <script src="lib/classList.js"></script>
+    
+    <script>
+      // Parse the query string into a key/value object
+      var query = {};
+      location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+        query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+      } );
+
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // If true; each slide will be pushed to the browser history
+        history: true,
+
+        // Flags if mouse wheel navigation should be enabled
+        mouseWheel: true,
+
+        // Apply a 3D roll to links on hover
+        rollingLinks: true,
+
+        // UI style
+        theme: query.theme || 'default', // default/neon
+
+        // Transition style
+        transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
+      });
+
+      hljs.initHighlightingOnLoad();
+    </script>
+
+  </body>
+</html>
