@@ -31,7 +31,7 @@ pre[class*="language-"],
 
 /* Code blocks */
 pre[class*="language-"] {
-	padding: 1em;
+	padding: 0.3em;
 	margin: .5em 0;
 	overflow: auto;	
 	border: .3em solid hsl(30,20%,40%);

@@ -93,7 +93,7 @@ pre .attr_selector,
 pre .pseudo,
 pre .apache .cbracket,
 pre .tex .formula {
-  color: #CC9393;
+  color: #FBB5B5;
 }
 
 pre .shebang,
@@ -103,7 +103,7 @@ pre .java .annotation,
 pre .template_comment,
 pre .pi,
 pre .doctype {
-  color: #7F9F7F;
+  color: #6CFBFD;
 }
 
 pre .xml .css,

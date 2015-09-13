@@ -47,7 +47,7 @@
 	      <li>JavaScriptが好き、以前の仕事で多いに扱った
 	      <li>でも最近はあまり触っていないので、勉強し直そうと思う
 	      <li>Pythonも、Lispも好き
-	      <li>日本語難しいアルよ
+	      <li>日本語難しい
 	    </ul>
 	  </div>
 	</section>
@@ -59,11 +59,20 @@
 	  <div>
 	    <ul>
 	      <li>1995～：誕生と現代仕様ベースライン<img src="assets/images/left-arrow.png" class="transparent" style="vertical-align: bottom; margin-left: 20px;" width=95 height=46>
-	      <li>2005：Ajaxの確立
-	      <li>2008～2009：次世代への架け橋(ES5)
-	      <li>2015.6～：ES6 
+	      <li>2005：Ajaxによる再発見
+	      <li>2008～2009：次世代への架け橋
+	      <li>2015.6～：ES6 約束の地
 	    </ul>
 	  </div>
+	  </section>
+	  <section>
+	    <h4>名詞定義</h4>
+	    <ul>
+	      <li>ECMAScript(ES)
+		<p class="substatemt">標準化されたJavaScriptの言語仕様</p>
+	      <li>JavaScript(JS)
+		<p class="substatemt">ECMAScriptを実装した言語たち</p>
+	    </ul>	    
 	  </section>
 	  <section>
 	    <img src="assets/images/brendanEich.jpg" height="300" width="400">
@@ -77,44 +86,40 @@
 	  </section>
 
 	  <section>
-	    <h4>基本設計</h4>
+	    <h4>他言語のいいとこを取りまくる</h4>
 	    <div>
 	      <ul>
 		<li>Cの基本文法
-		<li>Javaのデータタイプ、メモリ管理、ライブラリ
 		<li>Scheme言語の第一級関数
 		<li>Self言語のプロトタイプ
-		<li>非同期処理
-		<li>パックリまくる
+		<li>Javaのデータタイプ、メモリ管理、ライブラリ
 	      </ul>
 	    </div>
 	  </section>
 	  
 	  <section>
-	    <h4>僅か10日で設計できたが...</h4>
+	    <h4>言語仕様は小さい</h4>
 	    <div>
 	      <ul>
 		<li>言語機能は限定的に
 		  <p class="substatemt">当初はJava Appletの補完として設計されてた</p>
 		<li>大規模開発はそもそも考慮されてない
 		<li>パフォーマンスにも無関心
-		  <p class="substatemt">ポップアップできればいい</p>
+		  <p class="substatemt">インタプリタ式</p>
 	      </ul>
 	    </div>
 	  </section>
 	  
 	  <section>
-	    <h4>出来上がったJavaScript</h4>
+	    <h4>さらに</h4>
 	    <div>
 	      <ul>
-		<li>明らかの設計ミス
+		<li>設計ミス
 		  <p class="substatemt">グロバール変数、セミコロン自動補完など</p>
-		<li>開発者を混乱させる文法
+		<li>曖昧な文法
 		  <p class="substatemt">with構文、block構文など</p>
-		<li>癖のある機能
-		  <p class="substatemt">第一級関数とプロトタイプなど</p>
-		<li>WEBの繁栄と共に普及はしたものの
-		  <p class="substatemt">長年バカにされてた時期も</p>
+		<li>期待に応じない機能
+		  <p class="substatemt">typeof, isNaNなど</p>
 	      </ul>
 	    </div>
 	  </section>
@@ -132,6 +137,7 @@
 	      やはり仕事サボったら後は後悔する
 	    </div>
 	  </section>
+
 	</section>
 	
 	<!-- code block
@@ -159,9 +165,9 @@
 	  <div>
 	    <ul>
 	      <li>1995～：誕生と現代仕様ベースライン
-	      <li>2005：Ajaxの確立<img src="assets/images/left-arrow.png" class="transparent" style="vertical-align: bottom; margin-left: 20px;" width=95 height=46>
-	      <li>2008～2009：次世代への架け橋(ES5)
-	      <li>2015.6～：ES6 
+	      <li>2005：Ajaxによる再発見<img src="assets/images/left-arrow.png" class="transparent" style="vertical-align: bottom; margin-left: 20px;" width=95 height=46>
+	      <li>2008～2009：次世代への架け橋
+	      <li>2015.6～：ES6 約束の地
 	    </ul>
 	  </div>
 	  </section>
@@ -169,32 +175,58 @@
 	    <h4>JavaScriptの再発見</h4>
 	    <div>
 	      <ul>
-		<li>Google MapとGmailが登場
-		<li>Ajax開発手法が確立された
-		  <p class="substatemt">いろんな</p>
+		<li>IEでサーバーとの通信機能が実装された
+		  <p class="substatemt">JavaScriptの機能を飛躍的に高めた</p>
+		<li>Google MapとGmailによって認知された
+		  <p class="substatemt">Googleでなければ成し遂げないかもしれません</p>
 		<li>JavaScriptの復権
 		  <p class="substatemt">JavaScriptの欠点も注目されるようになる</p>
 	      </ul>
 	    </div>
 	    
           </section>
+
+          <section>
+	    <h4>Ajaxブーム</h4>
+	    <div>
+	      <ul>
+		<li>JavaScriptが進化してない
+		  <p class="substatemt">新しい機能が欲しい</p>
+		<li>パフォーマンスがボトルネック
+		  <p class="substatemt">複雑なアプリもサクサク動作させたい</p>
+		<li>次世代のJavaScriptが求められる
+	      </ul>
+	    </div>
+	    
           </section>
+	  
+        </section>
+	
+	<section>
+	  <section>
+	    <h2>JavaScriptの歴史</h2>
+	    
+	    <div>
+	      <ul>
+		<li>1995～：誕生と現代仕様ベースライン
+		<li>2005：Ajaxによる再発見
+		<li>2008～2009：次世代への架け橋<img src="assets/images/left-arrow.png" class="transparent" style="vertical-align: bottom; margin-left: 20px;" width=95 height=46>
+		<li>2015.6～：ES6 約束の地
+	      </ul>
+	    </div>
+	  </section>
 
 	  <section>
-	  <section>
-	  <h2>JavaScriptの歴史</h2>
-	  
-	  <div>
-	    <ul>
-	      <li>1995～：誕生と現代仕様ベースライン
-	      <li>2005：Ajaxの確立
-	      <li>2008～2009：次世代への架け橋(ES5)<img src="assets/images/left-arrow.png" class="transparent" style="vertical-align: bottom; margin-left: 20px;" width=95 height=46>
-	      <li>2015.6～：ES6 
-	    </ul>
-	  </div>
+	    <h4>野心的なES4</h4>
+            <ul>
+	      <li>ES3の問題を一気に解決しようとする
+	      <li>クラスも、モジュールも取り入れる
+	      <li>ES3と互換性がないため廃案
+            </ul>
 	  </section>
+
 	  <section>
-	    <h3>架け橋なるES5</h3>
+	    <h4>架け橋なるES5</h4>
             <ul>
 	      <li>基本的にES3と互換性を持つ
 	      <li>新しい便利な文法
@@ -204,20 +236,20 @@
 	  </section>
 	  
 	  <section>
-	    <h4><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Strict_mode">"use strict;"</a></h4>
+	    <h4><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Strict_mode">strictモード</a></h4>
             <ul>	      
-	      <li>ES3との互換性を持たない
+	      <li>ES3と下位互換を持ちつつも、上位互換を持たない
 	      <li>一部曖昧な、あるいは間違いを起こしやすい文法を廃止
 	      <li>グローバル変数の誤作成は防止できる
-	      <li>部分的に展開可能
-	      <li>JavaScript当初の設計ミスを可能な限り直す
+	      <li>JavaScriptの最もひどい幾つの問題点を修正する
+	      <li>関数レベルで部分的に展開可能
             </ul>
 	  </section>
 
 	  <section>
-	    <h3>パフォーマンスの改善</h3>
+	    <h4>パフォーマンスの改善</h4>
 	    <h4>JITエンジン: v8など</h4>
-	    <img src="assets/images/v8.jpg" height="300" width="400">
+	    <img src="assets/images/v8.png" height="368" width="672">
 	    <p><a href="https://ja.wikipedia.org/wiki/%E5%AE%9F%E8%A1%8C%E6%99%82%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9#JavaScript.E3.81.AEJIT.E3.82.B3.E3.83.B3.E3.83.91.E3.82.A4.E3.83.A9">wiki:JITエンジン</a></p>
 	  </section>
 	  
@@ -256,28 +288,30 @@ var d = add('hello', 'world');
 	  <div>
 	    <ul>
 	      <li>1995～：誕生と現代仕様ベースライン
-	      <li>2005：Ajaxの確立
-	      <li>2008～2009：次世代への架け橋(ES5)
-	      <li>2015.6～：ES6 <img src="assets/images/left-arrow.png" class="transparent" style="vertical-align: bottom; margin-left: 20px;" width=95 height=46>
+	      <li>2005：Ajaxによる再発見
+	      <li>2008～2009：次世代への架け橋
+	      <li>2015.6～：ES6 約束の地<img src="assets/images/left-arrow.png" class="transparent" style="vertical-align: bottom; margin-left: 20px;" width=95 height=46>
 	    </ul>
 	  </div>
 	  </section>
           <section>
-            <h2>現代JavaScriptが目指す所</h2>
-	    <h4>ECMAScript 6</h4>
+	    <h4>ECMAScript 6 約束の地</h4>
 	    <div style="position: relative; top: 50px;">
               <ul>
-		<li>WEBのアセンブリ
-		<li>
-		<li>
+		<li>クラス、モジュール
+		<li>イテレータ、for/ofループ、ジェネレータ
+		<li>アロー関数、2進数および8進数の整数リテラル
+		<li>Map、Set、WeekMap、WeekSet
+		<li>プロキシ、テンプレート文字列
+		<li>let、const、型付き配列、デフォルト引数
+		<li>Symbol、Promise、分割代入、可変長引数
               </ul>
-	    </div>
-	    
+	      <p><a>ES3以来大きな進化</a></p>
+	    </div>	    
           </section>
 	  
           <section>
-            <h2>WebAssembly</h2>
-	    <h4>ブラウザが実行可能なバイナリ形式</h4>
+            <h4>Webのアセンブリ</h4>
 	    <div style="position: relative;">
               <ul>
 		<li>asm.js<br/>
@@ -288,6 +322,8 @@ var a = 10 | 0;
 int a = 10;
 	      </code></pre>
 		<li>WebAssembly
+		  <p class="substatemt">ブラウザが実行可能なバイナリフォーマット</p>
+		<li>使うかどかは開発者次第だが、パフォーマンスへの障害を取り除く用意ができている
               </ul>
 	    </div>	    
           </section>
@@ -319,7 +355,7 @@ int a = 10;
             <h2>最後に</h2>
 	    <div>
 	      みんな気づいたかな？<br/>
-	      このスライドはHTML5とJavaScriptで作られている。<br/>
+	      このスライドはJavaScriptで作られている。<br/>
 	      <p>http://gpgkd906.github.io/javascriptcross/</p>
 	    </div>
 	  </div>
