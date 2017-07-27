@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Complex icons</title>
+    <style>
+    #map {
+        height: 100%;
+    }
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQptvnuOlYj4GVoG_Ao0fozZHpc7mYklg"></script>
+    <script src="keydragzoom.js"></script>
+    <script src="markermanager.js"></script>
+    <script src="CanvasLayer.js"></script>
+</head>
+<body>
+    <img src="https://maps.gstatic.com/mapfiles/transparent.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 38px; height: 33px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; opacity: 1;">
+    <div id="map"></div>
+    <script>
+    var center = {
+        "lat": 34.6898,
+        "lng": 135.1933
+    };
+    var beaches = [
+        { title: 'marker10', lat: 34.6898, lng: 135.1930, marker: null },
+        { title: 'marker9', lat: 34.6898, lng: 135.1931, marker: null },
+        { title: 'marker8', lat: 34.6898, lng: 135.1932, marker: null },
+        { title: 'marker7', lat: 34.6898, lng: 135.1933, marker: null },
+        { title: 'marker6', lat: 34.6898, lng: 135.1934, marker: null },
+        { title: 'marker5', lat: 34.6899, lng: 135.1930, marker: null },
+        { title: 'marker4', lat: 34.6899, lng: 135.1931, marker: null },
+        { title: 'marker3', lat: 34.6899, lng: 135.1932, marker: null },
+        { title: 'marker2', lat: 34.6899, lng: 135.1933, marker: null },
+        { title: 'marker1', lat: 34.6899, lng: 135.1934, marker: null }
+    ];
+    var markers = [];
+    var mgr;
+    var rectangle;
+    var cityCircle;
+    var max = function(arr){
+        return Math.max.apply( Math, arr );
+    };
+
+    var min = function(arr){
+        return Math.min.apply( Math, arr );
+    };
+    var image = {
+        url: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+        size: new google.maps.Size(20, 32),
+        origin: new google.maps.Point(0, 0),
+        anchor: new google.maps.Point(0, 32)
+    };
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 21,
+            center
+        });
+
+        setMarkers(map);
+        window.map = map;
+        map.enableKeyDragZoom({
+            visualEnabled: true,
+            noZoom: true
+        });
+
+        var dz = map.getDragZoomObject();
+        google.maps.event.addListener(dz, 'dragend', function ({ b: lng, f: lat }) {
+            var box = { lat, lng };
+            box.in = function (position) {
+                var latIn = position.lat > this.lat.b && position.lat < this.lat.f;
+                var lngIn = position.lng > this.lng.b && position.lng < this.lng.f;
+                return latIn && lngIn;
+            }
+            mgr = new MarkerManager(map, { trackMarkers: true });
+            google.maps.event.addListener(mgr, 'loaded', function(){
+                var targets = beaches.filter((beache) => {
+                    return box.in({ lat: beache.lat, lng: beache.lng});
+                });
+                mgr.addMarkers(targets.map((beache) => {
+                    // beache.marker.setIcon(image);
+                    return beache.marker;
+                    // beache.marker.setIcon(image);
+                }));
+                mgr.refresh();
+                // initialize the canvasLayer
+                window.targets = targets
+
+                var maxLat = max(targets.map((beache) => {
+                    return beache.lat;
+                    return beache.marker.position.lat();
+                }));
+                var maxLng = max(targets.map((beache) => {
+                    return beache.lng;
+                    return beache.marker.position.lng();
+                }));
+                var minLat = min(targets.map((beache) => {
+                    return beache.lat;
+                    return beache.marker.position.lat();
+                }));
+                var minLng = min(targets.map((beache) => {
+                    return beache.lng;
+                    return beache.marker.position.lng();
+                }));
+
+                if (rectangle) {
+                    rectangle.setMap(null);
+                    rectangle = null;
+                }
+
+                var bounds = {
+                    north: maxLat,
+                    south: minLat,
+                    east: maxLng,
+                    west: minLng
+                };
+
+                // Define a rectangle and set its editable property to true.
+                rectangle = new google.maps.Rectangle({
+                    bounds: bounds,
+                    editable: true,
+                    draggable: true,
+                    strokeColor: '#000000',
+                    strokeOpacity: 0.2,
+                    strokeWeight: 2,
+                    fillColor: '#FFFFFF',
+                    fillOpacity: 0,
+                    map: map,
+                });
+                // rectangle.setMap(map);
+
+                if (cityCircle) {
+                    cityCircle.setMap(null);
+                    cityCircle = null;
+                }
+
+                var center = {
+                    lat: (maxLat + minLat) / 2,
+                    lng: (maxLng + minLng) / 2
+                };
+                cityCircle = new google.maps.Circle({
+                    strokeColor: '#000000',
+                    strokeOpacity: 0.2,
+                    strokeWeight: 2,
+                    fillColor: '#FFFFFF',
+                    fillOpacity: 0,
+                    map: map,
+                    center: center,
+                    radius: 10,
+                    editable: true,
+                    draggable: true,
+                    rotatable: true
+                });
+
+            });
+        });
+    }
+
+    var inBox = function () {
+
+    }
+
+    function setMarkers(map) {
+        var shape = {
+            coords: [1, 1, 1, 20, 18, 20, 18, 1],
+            type: 'poly'
+        };
+        beaches.map((beach) => {
+            var marker = new google.maps.Marker({
+                position: {lat: beach.lat, lng: beach.lng},
+                map: map,
+                shape: shape,
+                title: beach.title,
+            });
+            beach.marker = marker;
+            return marker;
+        });
+    }
+
+
+    function resize() {
+    }
+
+    function update() {
+        var canvasWidth = canvasLayer.canvas.width;
+        var canvasHeight = canvasLayer.canvas.height;
+        context.clearRect(0, 0, canvasWidth, canvasHeight);
+        context.fillStyle = 'rgba(0, 0, 0, 0.005)';
+        var mapProjection = map.getProjection();
+        context.setTransform(1, 0, 0, 1, 0, 0);
+        var scale = Math.pow(2, map.zoom);
+        context.scale(scale, scale);
+        var offset = mapProjection.fromLatLngToPoint(canvasLayer.getTopLeft());
+        context.translate(- offset.x, - offset.y);
+        var worldPoint = mapProjection.fromLatLngToPoint(rectLatLng);
+        context.lineWidth = 2;
+        context.fillRect(worldPoint.x, worldPoint.y, rectWidth, rectHeight);
+    }
+    initMap();
+
+</script>
+</body>
+</html>
