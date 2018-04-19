@@ -71,11 +71,25 @@
     },
     {
         "uri": "finish.html",
-        "id": "next",
+        "id": "finish",
         "class": "step",
         "data": {
             "x": 12800,
             "y": 6400,
+            "z": -6400,
+            "scale": 4,
+            "rotate-x": 0,
+            "rotate-y": 0,
+            "rotate-z": 450
+        }
+    },
+    {
+        "uri": "smug.html",
+        "id": "smug",
+        "class": "step",
+        "data": {
+            "x": 12800,
+            "y": 12800,
             "z": -6400,
             "scale": 4,
             "rotate-x": 0,
