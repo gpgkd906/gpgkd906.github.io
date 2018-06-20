@@ -1,0 +1,100 @@
+[
+    {
+        "uri": "start.html",
+        "id": "title",
+        "class": "step title",
+        "data": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "scale": 4,
+            "rotate-x": 0,
+            "rotate-y": 0,
+            "rotate-z": 0
+        }
+    },
+    {
+        "uri": "step2.html",
+        "id": "questionnaire",
+        "class": "step",
+        "data": {
+            "x": 6000,
+            "y": 0,
+            "z": 0,
+            "scale": 4,
+            "rotate-x": 0,
+            "rotate-y": 0,
+            "rotate-z": 0
+        }
+    },
+    {
+        "uri": "step3.html",
+        "id": "honeycomb",
+        "class": "step",
+        "data": {
+            "x": 16000,
+            "y": 0,
+            "z": 0,
+            "scale": 16,
+            "rotate-x": 0,
+            "rotate-y": 0,
+            "rotate-z": 90
+        }
+    },
+    {
+        "uri": "step4.html",
+        "id": "firstclass",
+        "class": "step",
+        "data": {
+            "x": 16000,
+            "y": 0,
+            "z": -3200,
+            "scale": 2,
+            "rotate-x": 0,
+            "rotate-y": 0,
+            "rotate-z": 450
+        }
+    },
+    {
+        "uri": "step5.html",
+        "id": "secondclass",
+        "class": "step",
+        "data": {
+            "x": 20000,
+            "y": 0,
+            "z": -9600,
+            "scale": 1,
+            "rotate-x": 0,
+            "rotate-y": 0,
+            "rotate-z": 450
+        }
+    },
+    {
+        "uri": "finish.html",
+        "id": "finish",
+        "class": "step",
+        "data": {
+            "x": 12800,
+            "y": 6400,
+            "z": -6400,
+            "scale": 4,
+            "rotate-x": 0,
+            "rotate-y": 0,
+            "rotate-z": 450
+        }
+    },
+    {
+        "uri": "smug.html",
+        "id": "smug",
+        "class": "step",
+        "data": {
+            "x": 12800,
+            "y": 12800,
+            "z": -6400,
+            "scale": 4,
+            "rotate-x": 0,
+            "rotate-y": 0,
+            "rotate-z": 450
+        }
+    }
+]

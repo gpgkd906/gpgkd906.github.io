@@ -1,0 +1,183 @@
+[{
+		"uri": "start.html",
+		"id": "title",
+		"class": "step title",
+		"data": {
+			"x": 0,
+			"y": 0,
+			"z": 0,
+			"scale": 4,
+			"rotate-x": 0,
+			"rotate-y": 0,
+			"rotate-z": 0
+		}
+	},
+	{
+		"uri": "step1.html",
+		"id": "step1",
+		"class": "step",
+		"data": {
+			"x": 10000,
+			"y": 0,
+			"z": 0,
+			"scale": 4,
+			"rotate-x": 0,
+			"rotate-y": 0,
+			"rotate-z": 0
+		}
+	},
+	{
+		"uri": "step2.html",
+		"id": "step2",
+		"class": "step",
+		"data": {
+			"x": 10000,
+			"y": 10000,
+			"z": 0,
+			"scale": 4,
+			"rotate-x": 0,
+			"rotate-y": 0,
+			"rotate-z": 0
+		}
+	},
+	{
+		"uri": "step3.html",
+		"id": "step3",
+		"class": "step",
+		"data": {
+			"x": 10000,
+			"y": 20000,
+			"z": 0,
+			"scale": 4,
+			"rotate-x": 0,
+			"rotate-y": 0,
+			"rotate-z": 0
+		}
+	},
+	{
+		"uri": "step4.html",
+		"id": "step4",
+		"class": "step",
+		"data": {
+			"x": 15500,
+			"y": 22500,
+			"z": 5000,
+			"scale": 4,
+			"rotate-x": 0,
+			"rotate-y": 0,
+			"rotate-z": 0
+		}
+	},
+	{
+		"uri": "step5.html",
+		"id": "step5",
+		"class": "step",
+		"data": {
+			"x": 5000,
+			"y": 22500,
+			"z": 5000,
+			"scale": 4,
+			"rotate-x": 0,
+			"rotate-y": 0,
+			"rotate-z": 0
+		}
+	},
+	{
+		"uri": "step6.html",
+		"id": "step6",
+		"class": "step",
+		"data": {
+			"x": 5000,
+			"y": 27500,
+			"z": 5000,
+			"scale": 4,
+			"rotate-x": 0,
+			"rotate-y": 0,
+			"rotate-z": 0
+		}
+	},
+	{
+		"uri": "step7.html",
+		"id": "step7",
+		"class": "step",
+		"data": {
+			"x": 5000,
+			"y": 32500,
+			"z": 5000,
+			"scale": 4,
+			"rotate-x": 0,
+			"rotate-y": 0,
+			"rotate-z": 0
+		}
+	},
+	{
+		"uri": "step8.html",
+		"id": "step8",
+		"class": "step",
+		"data": {
+			"x": 15500,
+			"y": 17500,
+			"z": 5000,
+			"scale": 4,
+			"rotate-x": 0,
+			"rotate-y": 0,
+			"rotate-z": 360
+		}
+	},
+	{
+		"uri": "step9.html",
+		"id": "step9",
+		"class": "step",
+		"data": {
+			"x": 22000,
+			"y": 17500,
+			"z": 5000,
+			"scale": 4,
+			"rotate-x": 0,
+			"rotate-y": 0,
+			"rotate-z": 360
+		}
+	},
+	{
+		"uri": "step10.html",
+		"id": "step10",
+		"class": "step",
+		"data": {
+			"x": 50000,
+			"y": 0,
+			"z": -5000,
+			"scale": 1,
+			"rotate-x": 0,
+			"rotate-y": 0,
+			"rotate-z": 450
+		}
+	},
+	{
+		"uri": "step11.html",
+		"id": "step11",
+		"class": "step",
+		"data": {
+			"x": 50000,
+			"y": 10000,
+			"z": -5000,
+			"scale": 1,
+			"rotate-x": 0,
+			"rotate-y": 0,
+			"rotate-z": 450
+		}
+	},
+	{
+		"uri": "finish.html",
+		"id": "finish",
+		"class": "step",
+		"data": {
+			"x": 60000,
+			"y": 60000,
+			"z": 10000,
+			"scale": 4,
+			"rotate-x": 0,
+			"rotate-y": 0,
+			"rotate-z": 450
+		}
+	}
+]
